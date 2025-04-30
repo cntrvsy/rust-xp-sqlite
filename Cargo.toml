@@ -1,0 +1,13 @@
+[package]
+name = "rust-xp-sqlite"
+version = "0.1.0"
+edition = "2024"
+
+
+[lints.rust]
+unsafe_code = "forbid"
+unused ={ level = "allow", priority = -1} # for exploratory dev.
+
+[dependencies]
+# -- DB
+rusqlite = { version = "0.35.0", features = ["bundled"] }
