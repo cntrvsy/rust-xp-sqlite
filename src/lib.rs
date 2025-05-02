@@ -1,14 +1,5 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+// region:    --- Modules
+pub mod db_utils;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub type Result<T> = core::result::Result<T, Box<dyn std::error::Error>>;
+// endregion: --- Modules
